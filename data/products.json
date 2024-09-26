@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "category": "Wine",
+    "image": "img1",
+    "brand": "Merit-Brand",
+    "name": "Mirvari",
+    "name1": "",
+    "text": "The wine is made from grapes grown in the Shabran region of Azerbaijan, on the eastern slopes of the Greater Caucasus Mountains."
+  },
+  {
+    "id": 2,
+    "name": "Absolut",
+    "image": {},
+    "text": "Russian Brend",
+    "category": "Vodka"
+  }
+]
