@@ -1,14 +1,10 @@
 [
   {
     "id": 2,
-    "name": "Rum"
+    "category": "Vodka"
   },
   {
-    "id": 3,
-    "name": "Vodka"
-  },
-  {
-    "id": 3,
+    "id": 4,
     "category": "Konyak"
   }
 ]

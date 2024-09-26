@@ -14,5 +14,12 @@
     "image": {},
     "text": "Russian Brend",
     "category": "Vodka"
+  },
+  {
+    "id": 3,
+    "name": "Xan",
+    "image": {},
+    "text": "Made in Azerbaijan",
+    "category": "Vodka"
   }
 ]
