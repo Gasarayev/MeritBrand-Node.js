@@ -1,69 +1,62 @@
 const express = require('express');
+const { upload, uploadSliderImage, getSliderImages } = require('../controllers/sliderController');
+
 const router = express.Router();
-const sliderController = require('../controllers/sliderController');
 
 /**
  * @swagger
- * tags:
- *   name: Slider
- *   description: Slider information API
- */
-
-// Get all slider info
-/**
- * @swagger
- * /api/slider:
- *   get:
- *     summary: Get slider information
- *     tags: [Slider]
- *     responses:
- *       200:
- *         description: Slider information retrieved successfully
- */
-router.get('/slider', sliderController.getSliderInfo);
-
-// Create new slider info
-/**
- * @swagger
- * /api/slider:
+ * /api/images/upload:
  *   post:
- *     summary: Create new slider information
- *     tags: [Slider]
+ *     summary: Upload a slider image
+ *     tags: [Images]
  *     requestBody:
  *       required: true
  *       content:
- *         application/json:
+ *         multipart/form-data:
  *           schema:
  *             type: object
- *             example:
- *               title: "Slide Title"
- *               image: "image_url.jpg"
+ *             properties:
+ *               sliderImage:
+ *                 type: string
+ *                 format: binary
  *     responses:
- *       201:
- *         description: Slider information created successfully
+ *       200:
+ *         description: Slider image uploaded successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                 filePath:
+ *                   type: string
+ *       400:
+ *         description: Bad Request
  */
-router.post('/slider', sliderController.createSliderInfo);
+router.post('/upload', upload.single('sliderImage'), uploadSliderImage);
 
-// Delete slider info by ID
 /**
  * @swagger
- * /api/slider/{id}:
- *   delete:
- *     summary: Delete slider information by ID
- *     tags: [Slider]
- *     parameters:
- *       - in: path
- *         name: id
- *         schema:
- *           type: integer
- *         required: true
- *         description: The slider ID
+ * /api/images:
+ *   get:
+ *     summary: Get all slider images
+ *     tags: [Images]
  *     responses:
- *       204:
- *         description: Slider information deleted successfully
- *       404:
- *         description: Slider info not found
+ *       200:
+ *         description: List of slider images
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   filename:
+ *                     type: string
+ *                   url:
+ *                     type: string
  */
-router.delete('/slider/:id', sliderController.deleteSliderInfoById);
+router.get('/', getSliderImages);
 
 module.exports = router;

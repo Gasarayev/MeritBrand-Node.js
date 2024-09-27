@@ -1,40 +1,53 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
+const multer = require('multer');
 
-const dataFilePath = path.join(__dirname, "../data/slider.json");
+// Şəkil saxlanılması üçün konfiqurasiya
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    const uploadsDir = path.join(__dirname, '../uploads');
+    // Yükləmə qovluğunun olub olmadığını yoxlayırıq
+    if (!fs.existsSync(uploadsDir)) {
+      fs.mkdirSync(uploadsDir); // Yoxdursa, yaradırıq
+    }
+    cb(null, uploadsDir);
+  },
+  filename: (req, file, cb) => {
+    cb(null, `${Date.now()}-${file.originalname}`);
+  },
+});
 
-const getSliderInfo = () => {
-  const data = fs.readFileSync(dataFilePath);
-  return JSON.parse(data);
-};
+const upload = multer({ storage: storage });
 
-const saveSliderInfo = (slider) => {
-  fs.writeFileSync(dataFilePath, JSON.stringify(slider, null, 2));
-};
-
-exports.getSliderInfo = (req, res) => {
-  const slider = getSliderInfo();
-  res.json(slider);
-};
-
-exports.createSliderInfo = (req, res) => {
-  const slider = getSliderInfo();
-  const newSlider = {
-    id: slider.length + 1,
-    ...req.body,
-  };
-  slider.push(newSlider);
-  saveSliderInfo(slider);
-  res.status(201).json(newSlider);
-};
-
-exports.deleteSliderInfoById = (req, res) => {
-  const slider = getSliderInfo();
-  const newSlider = slider.filter((item) => item.id !== parseInt(req.params.id));
-  if (slider.length === newSlider.length) {
-    return res.status(404).send("Slider info not found");
+const uploadSliderImage = (req, res) => {
+  if (!req.file) {
+    return res.status(400).json({ message: "Please upload a file" });
   }
+  res.status(200).json({
+    message: "File uploaded successfully",
+    filePath: `/uploads/${req.file.filename}`,
+  });
+};
 
-  saveSliderInfo(newSlider);
-  res.status(204).send();
+const getSliderImages = (req, res) => {
+  const uploadsDir = path.join(__dirname, '../uploads');
+
+  fs.readdir(uploadsDir, (err, files) => {
+    if (err) {
+      return res.status(500).json({ message: "Unable to scan files" });
+    }
+
+    const sliderImageFiles = files.map(file => ({
+      filename: file,
+      url: `/uploads/${file}`
+    }));
+
+    res.status(200).json(sliderImageFiles);
+  });
+};
+
+module.exports = {
+  upload,
+  uploadSliderImage,
+  getSliderImages 
 };
