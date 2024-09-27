@@ -6,20 +6,87 @@
     "brand": "Merit-Brand",
     "name": "Mirvari",
     "name1": "",
-    "text": "The wine is made from grapes grown in the Shabran region of Azerbaijan, on the eastern slopes of the Greater Caucasus Mountains."
+    "text": "The wine is made from grapes grown in the Shabran region of Azerbaijan, on the eastern slopes of the Greater Caucasus Mountains.",
+    "comment": "test"
   },
   {
-    "id": 2,
+    "id": 48,
+    "name": "Tetroni",
+    "image": {},
+    "text": "The wine is made from Madrasa-Saperavi grape varieties grown in the Shabran region of Azerbaijan. On the eastern slopes of the Greater Caucasus Mountains.  The wine is richly red in color, with a delicate aroma of fresh fruit and a full taste with a pleasant sweetness.  Pairs wonderfully with desserts, fruit pastries and is an ideal complement to a decent meal.  Serving temperature 16-18 degrees.",
+    "category": "Wine",
+    "comment": ""
+  },
+  {
+    "id": 93,
+    "name": "Aylin",
+    "image": {},
+    "text": "The wine is made from Madrasa-Saperavi grape varieties grown in the Shabran region of Azerbaijan. On the eastern slopes of the Greater Caucasus Mountains.  The wine is richly red in color, with a delicate aroma of fresh fruit and a full taste with a pleasant sweetness.  Pairs wonderfully with desserts, fruit pastries and is an ideal complement to a decent meal.  Serving temperature 16-18 degrees.",
+    "category": "Wine",
+    "comment": ""
+  },
+  {
+    "id": 23,
+    "name": "Golden Valley Cognac",
+    "image": {},
+    "text": "Enjoy this artisanal Konyak, crafted using traditional methods. Its complex aromas of nuts and honey make it a delightful choice for both connoisseurs and newcomers.",
+    "category": "Cognac",
+    "comment": ""
+  },
+  {
+    "id": 83,
+    "name": "Crystal Lake Vodka",
+    "image": {},
+    "text": "Enjoy this premium Vodka that combines traditional methods with modern techniques, resulting in a smooth finish and a hint of sweetness that pairs well with fruit juices.",
+    "category": "Vodka",
+    "comment": ""
+  },
+  {
+    "id": 17,
+    "name": " Tropicana Rum",
+    "image": {},
+    "text": "This light Tropical Rum is perfect for summer cocktails, with a refreshing taste that captures the essence of the tropics. Ideal for mojitos and daiquiris.",
+    "category": "Rum",
+    "comment": ""
+  },
+  {
+    "id": 90,
+    "name": "Bacardi",
+    "image": {},
+    "text": "Our spiced Tropical Rum blends exotic spices with caramel undertones, making it a great addition to mixed drinks or sipped neat.",
+    "category": "Rum",
+    "comment": ""
+  },
+  {
+    "id": 80,
+    "name": "Mount Gay Rum",
+    "image": {},
+    "text": "Our spiced Tropical Rum blends exotic spices with caramel undertones, making it a great addition to mixed drinks or sipped neat.",
+    "category": "Rum",
+    "comment": ""
+  },
+  {
+    "id": 42,
+    "name": "Rémy Martin XO Excellence",
+    "image": {},
+    "text": "Our premium Konyak features a harmonious blend of vanilla and oak, with a smooth finish that lingers on the palate. Ideal for celebrations or special occasions.",
+    "category": "Cognac",
+    "comment": ""
+  },
+  {
+    "id": 92,
+    "name": "D’USSÉ® VSOP Cognac",
+    "image": {},
+    "text": "Enjoy this premium Vodka that combines traditional methods with modern techniques, resulting in a smooth finish and a hint of sweetness that pairs well with fruit juices.",
+    "category": "Cognac",
+    "comment": ""
+  },
+  {
+    "id": 35,
     "name": "Absolut",
     "image": {},
-    "text": "Russian Brend",
-    "category": "Vodka"
-  },
-  {
-    "id": 3,
-    "name": "Xan",
-    "image": {},
-    "text": "Made in Azerbaijan",
-    "category": "Vodka"
+    "text": "Our handcrafted Icelandic Vodka has a crisp and refreshing flavor profile, with subtle hints of citrus. Ideal for mixing in a variety of drinks.",
+    "category": "Vodka",
+    "comment": ""
   }
 ]

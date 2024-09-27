@@ -1,10 +1,18 @@
 [
   {
-    "id": 2,
+    "id": 29,
+    "category": "Congac"
+  },
+  {
+    "id": 18,
     "category": "Vodka"
   },
   {
-    "id": 4,
-    "category": "Konyak"
+    "id": 16,
+    "category": "Wine"
+  },
+  {
+    "id": 11,
+    "category": "Rum"
   }
 ]

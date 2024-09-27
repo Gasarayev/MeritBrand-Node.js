@@ -6,6 +6,9 @@ const categoryRoutes = require('./routes/categoryRoutes');
 const aboutRoutes = require('./routes/aboutRoutes'); 
 const swaggerConfig = require('./swagger/swaggerConfig');
 const contactRoutes = require('./routes/contactRoutes');
+const sliderRoutes = require('./routes/sliderRoutes'); 
+const commentRoutes = require('./routes/commentRoutes'); 
+
 
 const PORT = 3009;
 app.use(cors());
@@ -16,6 +19,9 @@ app.use('/api', productRoutes);
 app.use('/api', categoryRoutes);
 app.use('/api', aboutRoutes); 
 app.use('/api', contactRoutes);
+app.use('/api', sliderRoutes);
+app.use('/api', commentRoutes);
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
