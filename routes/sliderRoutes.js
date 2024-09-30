@@ -1,5 +1,5 @@
 const express = require('express');
-const { upload, uploadSliderImage, getSliderImages } = require('../controllers/sliderController');
+const { upload, uploadSliderImage, getSliderImages, deleteSliderImage } = require('../controllers/sliderController');
 
 const router = express.Router();
 
@@ -58,5 +58,35 @@ router.post('/upload', upload.single('sliderImage'), uploadSliderImage);
  *                     type: string
  */
 router.get('/', getSliderImages);
+
+/**
+ * @swagger
+ * /api/images/{filename}:
+ *   delete:
+ *     summary: Delete a slider image
+ *     tags: [Images]
+ *     parameters:
+ *       - name: filename
+ *         in: path
+ *         required: true
+ *         description: The name of the image file to delete
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Image deleted successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *       404:
+ *         description: Image not found
+ *       500:
+ *         description: Unable to delete the image
+ */
+router.delete('/:filename', deleteSliderImage);
 
 module.exports = router;

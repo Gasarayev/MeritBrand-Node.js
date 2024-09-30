@@ -51,21 +51,26 @@ router.get('/products/:id', productController.getProductById);
  *     requestBody:
  *       required: true
  *       content:
- *         application/json:
+ *         multipart/form-data:
  *           schema:
  *             type: object
- *             example:
- *               category: "Wine"
- *               image: "img1"
- *               brand: "Merit-Brand"
- *               name: "New Wine"
- *               name1: ""
- *               text: "This is a new product description."
+ *             properties:
+ *               category:
+ *                 type: string
+ *               brand:
+ *                 type: string
+ *               name:
+ *                 type: string
+ *               text:
+ *                 type: string
+ *               image:
+ *                 type: string
+ *                 format: binary
  *     responses:
  *       201:
  *         description: Product created successfully
  */
-router.post('/products', productController.createProduct);
+router.post('/products', productController.uploadProductImage, productController.createProduct);
 
 /**
  * @swagger
@@ -83,23 +88,28 @@ router.post('/products', productController.createProduct);
  *     requestBody:
  *       required: true
  *       content:
- *         application/json:
+ *         multipart/form-data:
  *           schema:
  *             type: object
- *             example:
- *               category: "Wine"
- *               image: "img1"
- *               brand: "Merit-Brand"
- *               name: "Updated Wine"
- *               name1: ""
- *               text: "Updated product description."
+ *             properties:
+ *               category:
+ *                 type: string
+ *               brand:
+ *                 type: string
+ *               name:
+ *                 type: string
+ *               text:
+ *                 type: string
+ *               image:
+ *                 type: string
+ *                 format: binary
  *     responses:
  *       200:
  *         description: Product updated successfully
  *       404:
  *         description: Product not found
  */
-router.put('/products/:id', productController.updateProduct);
+router.put('/products/:id', productController.uploadProductImage, productController.updateProduct);
 
 /**
  * @swagger

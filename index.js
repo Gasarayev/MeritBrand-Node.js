@@ -17,7 +17,10 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
 swaggerConfig(app);
+
+
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/productUpload', express.static(path.join(__dirname, 'productUpload')));
 
 
 app.use('/api', productRoutes);

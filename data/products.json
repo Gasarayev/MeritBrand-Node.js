@@ -1,92 +1,114 @@
 [
   {
-    "id": 1,
-    "category": "Wine",
-    "image": "img1",
-    "brand": "Merit-Brand",
-    "name": "Mirvari",
-    "name1": "",
-    "text": "The wine is made from grapes grown in the Shabran region of Azerbaijan, on the eastern slopes of the Greater Caucasus Mountains.",
-    "comment": "test"
-  },
-  {
-    "id": 48,
-    "name": "Tetroni",
-    "image": {},
-    "text": "The wine is made from Madrasa-Saperavi grape varieties grown in the Shabran region of Azerbaijan. On the eastern slopes of the Greater Caucasus Mountains.  The wine is richly red in color, with a delicate aroma of fresh fruit and a full taste with a pleasant sweetness.  Pairs wonderfully with desserts, fruit pastries and is an ideal complement to a decent meal.  Serving temperature 16-18 degrees.",
-    "category": "Wine",
-    "comment": ""
-  },
-  {
-    "id": 93,
-    "name": "Aylin",
-    "image": {},
-    "text": "The wine is made from Madrasa-Saperavi grape varieties grown in the Shabran region of Azerbaijan. On the eastern slopes of the Greater Caucasus Mountains.  The wine is richly red in color, with a delicate aroma of fresh fruit and a full taste with a pleasant sweetness.  Pairs wonderfully with desserts, fruit pastries and is an ideal complement to a decent meal.  Serving temperature 16-18 degrees.",
-    "category": "Wine",
-    "comment": ""
-  },
-  {
-    "id": 23,
-    "name": "Golden Valley Cognac",
-    "image": {},
-    "text": "Enjoy this artisanal Konyak, crafted using traditional methods. Its complex aromas of nuts and honey make it a delightful choice for both connoisseurs and newcomers.",
-    "category": "Cognac",
-    "comment": ""
-  },
-  {
-    "id": 83,
-    "name": "Crystal Lake Vodka",
-    "image": {},
-    "text": "Enjoy this premium Vodka that combines traditional methods with modern techniques, resulting in a smooth finish and a hint of sweetness that pairs well with fruit juices.",
+    "id": 72,
     "category": "Vodka",
-    "comment": ""
-  },
-  {
-    "id": 17,
-    "name": " Tropicana Rum",
-    "image": {},
-    "text": "This light Tropical Rum is perfect for summer cocktails, with a refreshing taste that captures the essence of the tropics. Ideal for mojitos and daiquiris.",
-    "category": "Rum",
-    "comment": ""
-  },
-  {
-    "id": 90,
-    "name": "Bacardi",
-    "image": {},
-    "text": "Our spiced Tropical Rum blends exotic spices with caramel undertones, making it a great addition to mixed drinks or sipped neat.",
-    "category": "Rum",
-    "comment": ""
-  },
-  {
-    "id": 80,
-    "name": "Mount Gay Rum",
-    "image": {},
-    "text": "Our spiced Tropical Rum blends exotic spices with caramel undertones, making it a great addition to mixed drinks or sipped neat.",
-    "category": "Rum",
-    "comment": ""
-  },
-  {
-    "id": 42,
-    "name": "Rémy Martin XO Excellence",
-    "image": {},
-    "text": "Our premium Konyak features a harmonious blend of vanilla and oak, with a smooth finish that lingers on the palate. Ideal for celebrations or special occasions.",
-    "category": "Cognac",
-    "comment": ""
-  },
-  {
-    "id": 92,
-    "name": "D’USSÉ® VSOP Cognac",
-    "image": {},
-    "text": "Enjoy this premium Vodka that combines traditional methods with modern techniques, resulting in a smooth finish and a hint of sweetness that pairs well with fruit juices.",
-    "category": "Cognac",
-    "comment": ""
-  },
-  {
-    "id": 35,
     "name": "Absolut",
-    "image": {},
-    "text": "Our handcrafted Icelandic Vodka has a crisp and refreshing flavor profile, with subtle hints of citrus. Ideal for mixing in a variety of drinks.",
+    "text": "Our handcrafted Icelandic Vodka has a crisp and refreshing flavor profile, with subtle hints of citrus. Ideal for mixing in a variety of drinks.\t",
+    "image": "http://localhost:3009/productUpload/1727694337268-productImg.png",
+    "comment": ""
+  },
+  {
+    "id": 16,
+    "category": "Rum",
+    "name": "Bacardi\t",
+    "text": "Our spiced Tropical Rum blends exotic spices with caramel undertones, making it a great addition to mixed drinks or sipped neat.",
+    "image": "http://localhost:3009/productUpload/1727694656210-rum.jpg",
+    "comment": ""
+  },
+  {
+    "id": 12,
+    "category": "Rum",
+    "name": "Mount Gay Rum",
+    "text": "Our spiced Tropical Rum blends exotic spices with caramel undertones, making it a great addition to mixed drinks or sipped neat.",
+    "image": "http://localhost:3009/productUpload/1727694678607-rum2.jpg",
+    "comment": ""
+  },
+  {
+    "id": 18,
     "category": "Vodka",
+    "name": "Crystal Lake Vodka\t",
+    "text": "Enjoy this premium Vodka that combines traditional methods with modern techniques, resulting in a smooth finish and a hint of sweetness that pairs well with fruit juices.",
+    "image": "http://localhost:3009/productUpload/1727694809532-vodka1.png",
+    "comment": ""
+  },
+  {
+    "id": 2,
+    "category": "Congac",
+    "name": "Golden Valley Cognac",
+    "text": "Enjoy this artisanal Konyak, crafted using traditional methods. Its complex aromas of nuts and honey make it a delightful choice for both connoisseurs and newcomers.",
+    "image": "http://localhost:3009/productUpload/1727694839472-konyak3.png",
+    "comment": ""
+  },
+  {
+    "id": 33,
+    "category": "Wine",
+    "name": "Aylin\t",
+    "text": "The wine is made from Madrasa-Saperavi grape varieties grown in the Shabran region of Azerbaijan. On the eastern slopes of the Greater Caucasus Mountains. The wine is richly red in color, with a delicate aroma of fresh fruit and a full taste with a pleasant sweetness. Pairs wonderfully with desserts, fruit pastries and is an ideal complement to a decent meal. Serving temperature 16-18 degrees.",
+    "image": "http://localhost:3009/productUpload/1727694866595-productImg.png",
+    "comment": ""
+  },
+  {
+    "id": 21,
+    "category": "Wine",
+    "name": "Tetroni",
+    "text": "The wine is made from Madrasa-Saperavi grape varieties grown in the Shabran region of Azerbaijan. On the eastern slopes of the Greater Caucasus Mountains. The wine is richly red in color, with a delicate aroma of fresh fruit and a full taste with a pleasant sweetness. Pairs wonderfully with desserts, fruit pastries and is an ideal complement to a decent meal. Serving temperature 16-18 degrees.",
+    "image": "http://localhost:3009/productUpload/1727694882766-wine2.png",
+    "comment": ""
+  },
+  {
+    "id": 41,
+    "category": "Wine",
+    "name": "Mirvari",
+    "text": "The wine is made from grapes grown in the Shabran region of Azerbaijan, on the eastern slopes of the Greater Caucasus Mountains.",
+    "image": "http://localhost:3009/productUpload/1727694897516-wine1.png",
+    "comment": ""
+  },
+  {
+    "id": 11,
+    "category": "Rum",
+    "name": "Gold Rum",
+    "text": " Aged for a shorter time than dark rum, gold rum has a richer flavor, often with hints of vanilla and caramel due to the aging process.",
+    "image": "http://localhost:3009/productUpload/1727695157760-rum34.jpg",
+    "comment": ""
+  },
+  {
+    "id": 12,
+    "category": "Vodka",
+    "name": "Belarusskaya ",
+    "text": " The vodka undergoes multiple distillation processes, ensuring a high level of purity and removing any undesirable impurities. The distillation process is often followed by charcoal filtration, which contributes to its smoothness.",
+    "image": "http://localhost:3009/productUpload/1727695415443-belaruskaya.jpg",
+    "comment": ""
+  },
+  {
+    "id": 13,
+    "category": "Vodka",
+    "name": "Level ",
+    "text": " Vodka holds a special place in Belarusian culture, often being a part of celebrations, toasts, and rituals. It is associated with hospitality and is frequently offered to guests as a sign of welcome.",
+    "image": "http://localhost:3009/productUpload/1727695501130-level vodka.jpeg",
+    "comment": ""
+  },
+  {
+    "id": 71,
+    "category": "Wine",
+    "name": "Matrasa",
+    "text": "Many Matras red wines are aged in oak barrels, which enhances their complexity and adds layers of flavor, such as vanilla, toasted oak, and subtle smokiness. The aging process also contributes to a smoother mouthfeel and well-integrated tannins.",
+    "image": "http://localhost:3009/productUpload/1727695737058-wine21.jpeg",
+    "comment": ""
+  },
+  {
+    "id": 75,
+    "category": "Congac",
+    "name": "Rémy Martin XO Excellence",
+    "text": "Our premium Konyak features a harmonious blend of vanilla and oak, with a smooth finish that lingers on the palate. Ideal for celebrations or special occasions.",
+    "image": "http://localhost:3009/productUpload/1727695831753-cog.png",
+    "comment": ""
+  },
+  {
+    "id": 49,
+    "category": "Congac",
+    "name": "D’USSÉ® VSOP Cognac",
+    "text": "Enjoy this premium Vodka that combines traditional methods with modern techniques, resulting in a smooth finish and a hint of sweetness that pairs well with fruit juices.",
+    "image": "http://localhost:3009/productUpload/1727695903627-coggg.png",
     "comment": ""
   }
 ]

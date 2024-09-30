@@ -1,59 +1,99 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
+const multer = require('multer');
 
-const dataFilePath = path.join(__dirname, "../data/products.json");
+const productsFilePath = path.join(__dirname, '../data/products.json');
 
-const getProducts = () => {
-  const data = fs.readFileSync(dataFilePath);
+const loadProducts = () => {
+  const data = fs.readFileSync(productsFilePath, 'utf8');
   return JSON.parse(data);
 };
 
 const saveProducts = (products) => {
-  fs.writeFileSync(dataFilePath, JSON.stringify(products, null, 2));
+  fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+};
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, path.join(__dirname, '../productUpload')); 
+  },
+  filename: (req, file, cb) => {
+    cb(null, `${Date.now()}-${file.originalname}`);
+  },
+});
+
+const upload = multer({ storage });
+
+exports.uploadProductImage = upload.single('image');
+
+const generateUniqueId = (products) => {
+  let newId;
+  do {
+    newId = Math.floor(Math.random() * 100); 
+  } while (products.find(product => product.id === newId)); 
+  return newId;
 };
 
 exports.getAllProducts = (req, res) => {
-  const products = getProducts();
-  res.json(products);
-};
-
-exports.getProductById = (req, res) => {
-  const products = getProducts();
-  const product = products.find((p) => p.id === parseInt(req.params.id));
-  if (!product) {
-    return res.status(404).send("Product not found");
-  }
-  res.json(product);
+  const products = loadProducts();
+  res.status(200).json(products);
 };
 
 exports.createProduct = (req, res) => {
-  const products = getProducts();
+  const products = loadProducts();
+
   const newProduct = {
-    id: products.length + 1,
-    ...req.body,
+    id: generateUniqueId(products), 
+    category: req.body.category,
+    brand: req.body.brand,
+    name: req.body.name,
+    text: req.body.text,
+    image: req.file ? `http://localhost:3009/productUpload/${req.file.filename}` : '',
+    comment: req.body.comment || '',
   };
+
   products.push(newProduct);
   saveProducts(products);
   res.status(201).json(newProduct);
 };
 
 exports.updateProduct = (req, res) => {
-  const products = getProducts();
-  const index = products.findIndex((p) => p.id === parseInt(req.params.id));
-  if (index === -1) {
-    return res.status(404).send("Product not found");
+  const products = loadProducts();
+  const productIndex = products.findIndex((p) => p.id === parseInt(req.params.id));
+
+  if (productIndex === -1) {
+    return res.status(404).json({ message: 'Product not found' });
   }
-  products[index] = { id: parseInt(req.params.id), ...req.body };
+
+  products[productIndex] = {
+    ...products[productIndex],
+    ...req.body,
+    image: req.file ? `http://localhost:3009/productUpload/${req.file.filename}` : products[productIndex].image,
+  };
+
   saveProducts(products);
-  res.json(products[index]);
+  res.status(200).json(products[productIndex]);
+};
+
+exports.getProductById = (req, res) => {
+  const products = loadProducts();
+  const product = products.find((p) => p.id === parseInt(req.params.id));
+
+  if (!product) {
+    return res.status(404).json({ message: 'Product not found' });
+  }
+
+  res.status(200).json(product);
 };
 
 exports.deleteProduct = (req, res) => {
-  const products = getProducts();
-  const newProducts = products.filter((p) => p.id !== parseInt(req.params.id));
-  if (products.length === newProducts.length) {
-    return res.status(404).send("Product not found");
+  const products = loadProducts();
+  const updatedProducts = products.filter((p) => p.id !== parseInt(req.params.id));
+
+  if (updatedProducts.length === products.length) {
+    return res.status(404).json({ message: 'Product not found' });
   }
-  saveProducts(newProducts);
+
+  saveProducts(updatedProducts);
   res.status(204).send();
 };
