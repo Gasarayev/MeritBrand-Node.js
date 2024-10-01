@@ -1,13 +1,14 @@
 [
   {
-    "id": 1,
-    "image": "",
-    "description": "Merit Brand LLC is a modern production enterprise equipped with the latest types of equipment. Translated from English, the word Merit means merit, advantage, quality. The given name fully reflects the essence of the enterprise, its production capacity, strength and the ability to use innovations. Merit Brand plant was established in 2007 in the Shabran settlement of the Republic of Azerbaijan, Uzun Boyat village, located at the foot of the Great Caucasus Mountains and on the coast of the Caspian Sea. The place where he settled was not chosen by chance, because nature has gifted this region with fertile soil and very favorable climatic conditions for winemaking."
+    "id": 2,
+    "name": "How We Started",
+    "description": "Merit Brand plant, Republic of Azerbaijan in 2007Shabran settlement, at the foot of the Great Caucasus Mountains and the Caspian Seain the territory of the village of Uzun Boyat, located on the coast of the seasearched. Because his place of residence was not chosen by chancenature is fertile for winemaking in this regionsoil and very favorable climatic conditions like seedshad done",
+    "image": "http://localhost:3009/aboutUpload/1727772082267-vodka_prosses.png"
   },
   {
-    "id": 2,
-    "title": "string",
-    "description": "string",
-    "image": "http://localhost:3009/aboutUpload/1727770631041-1724344950980.jpeg"
+    "id": 26,
+    "name": "Passion & Craftmanship",
+    "description": "Our plant also produces vodka. This in order to be the most technologically advanced in the plant area a special building equipped with advanced equipment is allocated. Invited from Ukraine and Kabardino-Balkaria to extensive experience All the production that goes on here are experts control their processes. The basis of the recipes only raw materials of natural origin. Use in production The waters of the mountainous sources are unique and useful has features. The filtration process is almost vodka as it is used at every stage of production, here can be considered the most basic",
+    "image": "http://localhost:3009/aboutUpload/1727772123689-wine_prosses.png"
   }
 ]
