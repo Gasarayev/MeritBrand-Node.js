@@ -3,5 +3,11 @@
     "id": 1,
     "image": "",
     "description": "Merit Brand LLC is a modern production enterprise equipped with the latest types of equipment. Translated from English, the word Merit means merit, advantage, quality. The given name fully reflects the essence of the enterprise, its production capacity, strength and the ability to use innovations. Merit Brand plant was established in 2007 in the Shabran settlement of the Republic of Azerbaijan, Uzun Boyat village, located at the foot of the Great Caucasus Mountains and on the coast of the Caspian Sea. The place where he settled was not chosen by chance, because nature has gifted this region with fertile soil and very favorable climatic conditions for winemaking."
+  },
+  {
+    "id": 2,
+    "title": "string",
+    "description": "string",
+    "image": "http://localhost:3009/aboutUpload/1727770631041-1724344950980.jpeg"
   }
 ]

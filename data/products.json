@@ -10,7 +10,7 @@
   {
     "id": 16,
     "category": "Rum",
-    "name": "Bacardi\t",
+    "name": "Bacardi",
     "text": "Our spiced Tropical Rum blends exotic spices with caramel undertones, making it a great addition to mixed drinks or sipped neat.",
     "image": "http://localhost:3009/productUpload/1727694656210-rum.jpg",
     "comment": ""
@@ -29,14 +29,6 @@
     "name": "Crystal Lake Vodka\t",
     "text": "Enjoy this premium Vodka that combines traditional methods with modern techniques, resulting in a smooth finish and a hint of sweetness that pairs well with fruit juices.",
     "image": "http://localhost:3009/productUpload/1727694809532-vodka1.png",
-    "comment": ""
-  },
-  {
-    "id": 2,
-    "category": "Congac",
-    "name": "Golden Valley Cognac",
-    "text": "Enjoy this artisanal Konyak, crafted using traditional methods. Its complex aromas of nuts and honey make it a delightful choice for both connoisseurs and newcomers.",
-    "image": "http://localhost:3009/productUpload/1727694839472-konyak3.png",
     "comment": ""
   },
   {
@@ -109,6 +101,14 @@
     "name": "D’USSÉ® VSOP Cognac",
     "text": "Enjoy this premium Vodka that combines traditional methods with modern techniques, resulting in a smooth finish and a hint of sweetness that pairs well with fruit juices.",
     "image": "http://localhost:3009/productUpload/1727695903627-coggg.png",
+    "comment": ""
+  },
+  {
+    "id": 97,
+    "category": "Congac",
+    "name": "Golden Valley\t",
+    "text": "Enjoy this artisanal Konyak, crafted using traditional methods. Its complex aromas of nuts and honey make it a delightful choice for both connoisseurs and newcomers.",
+    "image": "http://localhost:3009/productUpload/1727706877583-konyak3.png",
     "comment": ""
   }
 ]

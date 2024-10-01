@@ -44,7 +44,7 @@ router.get('/about', aboutController.getAboutInfo);
  */
 router.get('/about/:id', aboutController.getAboutInfoById);
 
-// Create new about info
+// Create new about info with image upload
 /**
  * @swagger
  * /api/about:
@@ -54,9 +54,17 @@ router.get('/about/:id', aboutController.getAboutInfoById);
  *     requestBody:
  *       required: true
  *       content:
- *         application/json:
+ *         multipart/form-data:
  *           schema:
  *             type: object
+ *             properties:
+ *               title:
+ *                 type: string
+ *               description:
+ *                 type: string
+ *               image:
+ *                 type: string
+ *                 format: binary
  *             example:
  *               title: "About Us"
  *               description: "This is the about section of the site."
@@ -64,7 +72,7 @@ router.get('/about/:id', aboutController.getAboutInfoById);
  *       201:
  *         description: About information created successfully
  */
-router.post('/about', aboutController.createAboutInfo);
+router.post('/about', aboutController.uploadAboutImage, aboutController.createAboutInfo);
 
 // Update about info by ID
 /**

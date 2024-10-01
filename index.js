@@ -21,6 +21,7 @@ swaggerConfig(app);
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/productUpload', express.static(path.join(__dirname, 'productUpload')));
+app.use('/aboutUpload', express.static(path.join(__dirname, 'aboutUpload')));
 
 
 app.use('/api', productRoutes);
